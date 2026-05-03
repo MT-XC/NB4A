@@ -5,7 +5,7 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: 使用前请点击右上角更新当前组订阅, server: ccoo1.whtjdasha.com, port: 55160, type: ss, cipher: chacha20-ietf-poly1305, password: ea433063-2ce4-4dc4-b7b7-86ad4b988ba0}
+  - {name: "使用前\n请点击右上角更新当前组订阅", server: ccoo1.whtjdasha.com, port: 55160, type: ss, cipher: chacha20-ietf-poly1305, password: ea433063-2ce4-4dc4-b7b7-86ad4b988ba0}
   - {name: 香港｜01｜HKT, server: hkt.ccwink.cc, port: 56309, type: hysteria2, ports: 56309, password: ebed5458-3d4d-4cff-b98e-48fc3837d5cf, sni: hkt.ccwink.cc, skip-cert-verify: true}
   - {name: 香港｜09｜AWS, server: jpaws.ccwink.photos, port: 88, type: hysteria2, ports: 88, password: ebed5458-3d4d-4cff-b98e-48fc3837d5cf, sni: hkak.ccwink.cc, skip-cert-verify: true}
   - {name: 香港｜10｜AWS, server: hkaws.ccwink.photos, port: 88, type: hysteria2, ports: 88, password: ebed5458-3d4d-4cff-b98e-48fc3837d5cf, sni: hkak.ccwink.cc, skip-cert-verify: true}
@@ -186,7 +186,7 @@ proxy-groups:
     type: select
     proxies:
       - ♻️ 自动选择
-      - 使用前请点击右上角更新当前组订阅
+      - "使用前\n请点击右上角更新当前组订阅"
       - 香港｜01｜HKT
       - 香港｜09｜AWS
       - 香港｜10｜AWS
@@ -368,7 +368,7 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - 使用前请点击右上角更新当前组订阅
+      - "使用前\n请点击右上角更新当前组订阅"
       - 香港｜01｜HKT
       - 香港｜09｜AWS
       - 香港｜10｜AWS
