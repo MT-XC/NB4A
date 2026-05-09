@@ -4,7 +4,7 @@ allow-lan: true
 mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
-proxies: 
+proxies:
   - {name: 使用前请点击右上角更新当前组订阅, server: ccoo1.whtjdasha.com, port: 55160, type: ss, cipher: chacha20-ietf-poly1305, password: ea433063-2ce4-4dc4-b7b7-86ad4b988ba0}
   - {name: 香港｜01｜HKT, server: hkt.ccwink.cc, port: 56309, type: hysteria2, ports: 56309, password: ebed5458-3d4d-4cff-b98e-48fc3837d5cf, sni: hkt.ccwink.cc, skip-cert-verify: true}
   - {name: 香港｜02｜HKT, server: hkt.ccwink.cc, port: 6549, type: anytls, password: ebed5458-3d4d-4cff-b98e-48fc3837d5cf, skip-cert-verify: true}
