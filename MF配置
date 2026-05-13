@@ -5,6 +5,7 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
+  - {name: "使用前\n点击右上角更新当前组订阅", server: ccoo1.whtjdasha.com, port: 55160, type: ss, cipher: chacha20-ietf-poly1305, password: ea433063-2ce4-4dc4-b7b7-86ad4b988ba0}
   - {name: 线路01, server: usa1.wanxiangjd.cc, port: 14010, type: anytls, password: d3a9c6aa-fa53-46ee-812d-82608405521c, skip-cert-verify: true}
   - {name: "直连美国A1[推荐]", server: usa1.wanxiangjd.cc, port: 14010, type: anytls, password: d3a9c6aa-fa53-46ee-812d-82608405521c, skip-cert-verify: true}
   - {name: "直连美国A2[推荐]", server: usa3.wanxiangjd.cc, port: 14010, type: anytls, password: d3a9c6aa-fa53-46ee-812d-82608405521c, skip-cert-verify: true}
@@ -58,6 +59,7 @@ proxy-groups:
     type: select
     proxies:
       - ♻️ 自动选择
+      - "使用前\n点击右上角更新当前组订阅"
       - 线路01
       - 直连美国A1[推荐]
       - 直连美国A2[推荐]
@@ -112,6 +114,7 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
+      - "使用前\n点击右上角更新当前组订阅"
       - 线路01
       - 直连美国A1[推荐]
       - 直连美国A2[推荐]
