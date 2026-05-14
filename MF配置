@@ -1,1 +1,418 @@
-c3M6Ly9ZMmhoWTJoaE1qQXRhV1YwWmkxd2IyeDVNVE13TlRwbFlUUXpNekEyTXkweVkyVTBMVFJrWXpRdFlqZGlOeTA0Tm1Ga05HSTVPRGhpWVRBQGNjb28xLndodGpkYXNoYS5jb206NTUxNjAjJUU0JUJEJUJGJUU3JTk0JUE4JUU1JTg5JThEJTBBJUU3JTgyJUI5JUU1JTg3JUJCJUU1JThGJUIzJUU0JUI4JThBJUU4JUE3JTkyJUU2JTlCJUI0JUU2JTk2JUIwJUU1JUJEJTkzJUU1JTg5JThEJUU3JUJCJTg0JUU4JUFFJUEyJUU5JTk4JTg1CmFueXRsczovLzJmNGMzZmM1LThmYTItNDU3Ni1hNTgzLThmOThhNjAyNjg4N0Boa2F3cy5jY3dpbmsucGhvdG9zOjYwMDAxLz9pbnNlY3VyZT0xJnNuaT1iYWlkdS5jb20jJUU3JUJBJUJGJUU4JUI3JUFGMDEKYW55dGxzOi8vMmY0YzNmYzUtOGZhMi00NTc2LWE1ODMtOGY5OGE2MDI2ODg3QGhrYXdzLmNjd2luay5waG90b3M6NjAwMDEvP2luc2VjdXJlPTEmc25pPWJhaWR1LmNvbSMlRTclQkElQkYlRTglQjclQUYwMgphbnl0bHM6Ly8yZjRjM2ZjNS04ZmEyLTQ1NzYtYTU4My04Zjk4YTYwMjY4ODdAaGthd3MuY2N3aW5rLnBob3Rvczo2MDAwMS8/aW5zZWN1cmU9MSZzbmk9YmFpZHUuY29tIyVFNyVCQSVCRiVFOCVCNyVBRjAzCmFueXRsczovLzJmNGMzZmM1LThmYTItNDU3Ni1hNTgzLThmOThhNjAyNjg4N0BqcGF3cy5jY3dpbmsucGhvdG9zOjYwMDAxLz9pbnNlY3VyZT0xJnNuaT1iYWlkdS5jb20jJUU3JUJBJUJGJUU4JUI3JUFGMDQKaHkyOi8vMmY0YzNmYzUtOGZhMi00NTc2LWE1ODMtOGY5OGE2MDI2ODg3QGhrdC5jY3dpbmsuY2M6NTYzMDkvP2luc2VjdXJlPTEmc25pPWhrdC5jY3dpbmsuY2MjJUYwJTlGJTg3JUFEJUYwJTlGJTg3JUIwJUU5JUE2JTk5JUU2JUI4JUFGJUVGJUJEJTlDMDElRUYlQkQlOUNIS1QKYW55dGxzOi8vMmY0YzNmYzUtOGZhMi00NTc2LWE1ODMtOGY5OGE2MDI2ODg3QGhrdC5jY3dpbmsuY2M6NjU0OS8/aW5zZWN1cmU9MSZzbmk9YmFpZHUuY29tIyVGMCU5RiU4NyVBRCVGMCU5RiU4NyVCMCVFOSVBNiU5OSVFNiVCOCVBRiVFRiVCRCU5QzAyJUVGJUJEJTlDSEtUCmFueXRsczovLzJmNGMzZmM1LThmYTItNDU3Ni1hNTgzLThmOThhNjAyNjg4N0Boa2F3cy5jY3dpbmsucGhvdG9zOjYwMDA1Lz9pbnNlY3VyZT0xJnNuaT1iYWlkdS5jb20jJUYwJTlGJTg3JUFEJUYwJTlGJTg3JUIwJUU5JUE2JTk5JUU2JUI4JUFGJUVGJUJEJTlDMDMlRUYlQkQlOUMlRTUlQUUlQjYlRTUlQUUlQkQKYW55dGxzOi8vMmY0YzNmYzUtOGZhMi00NTc2LWE1ODMtOGY5OGE2MDI2ODg3QGpwYXdzLmNjd2luay5waG90b3M6NjAwMDUvP2luc2VjdXJlPTEmc25pPWJhaWR1LmNvbSMlRjAlOUYlODclQUQlRjAlOUYlODclQjAlRTklQTYlOTklRTYlQjglQUYlRUYlQkQlOUMwNCVFRiVCRCU5QyVFNSVBRSVCNiVFNSVBRSVCRAphbnl0bHM6Ly8yZjRjM2ZjNS04ZmEyLTQ1NzYtYTU4My04Zjk4YTYwMjY4ODdAaGthd3MuY2N3aW5rLnBob3Rvczo2MDAwMS8/aW5zZWN1cmU9MSZzbmk9YmFpZHUuY29tIyVGMCU5RiU4NyVBRCVGMCU5RiU4NyVCMCVFOSVBNiU5OSVFNiVCOCVBRiVFRiVCRCU5QzA1JUVGJUJEJTlDQVdTCmFueXRsczovLzJmNGMzZmM1LThmYTItNDU3Ni1hNTgzLThmOThhNjAyNjg4N0Boa2F3cy5jY3dpbmsucGhvdG9zOjYwMDAxLz9pbnNlY3VyZT0xJnNuaT1iYWlkdS5jb20jJUYwJTlGJTg3JUFEJUYwJTlGJTg3JUIwJUU5JUE2JTk5JUU2JUI4JUFGJUVGJUJEJTlDMDYlRUYlQkQlOUNBV1MKYW55dGxzOi8vMmY0YzNmYzUtOGZhMi00NTc2LWE1ODMtOGY5OGE2MDI2ODg3QGpwYXdzLmNjd2luay5waG90b3M6NjAwMDEvP2luc2VjdXJlPTEmc25pPWJhaWR1LmNvbSMlRjAlOUYlODclQUQlRjAlOUYlODclQjAlRTklQTYlOTklRTYlQjglQUYlRUYlQkQlOUMwNyVFRiVCRCU5Q0FXUwphbnl0bHM6Ly8yZjRjM2ZjNS04ZmEyLTQ1NzYtYTU4My04Zjk4YTYwMjY4ODdAanBhd3MuY2N3aW5rLnBob3Rvczo2MDAwMS8/aW5zZWN1cmU9MSZzbmk9YmFpZHUuY29tIyVGMCU5RiU4NyVBRCVGMCU5RiU4NyVCMCVFOSVBNiU5OSVFNiVCOCVBRiVFRiVCRCU5QzA4JUVGJUJEJTlDQVdTCnR1aWM6Ly8yZjRjM2ZjNS04ZmEyLTQ1NzYtYTU4My04Zjk4YTYwMjY4ODc6MmY0YzNmYzUtOGZhMi00NTc2LWE1ODMtOGY5OGE2MDI2ODg3QGhrYXdzLmNjd2luay5waG90b3M6ODgvP2Nvbmdlc3Rpb25fY29udHJvbD1iYnImdWRwX3JlbGF5X21vZGU9cXVpYyZzbmk9aGthay5jY3dpbmsuY2MmYWxwbj1oMyZhbGxvd19pbnNlY3VyZT0xIyVGMCU5RiU4NyVBRCVGMCU5RiU4NyVCMCVFOSVBNiU5OSVFNiVCOCVBRiVFRiVCRCU5QzEwJUVGJUJEJTlDQVdTCmFueXRsczovLzJmNGMzZmM1LThmYTItNDU3Ni1hNTgzLThmOThhNjAyNjg4N0Boa2F3cy5jY3dpbmsucGhvdG9zOjYwMDA2Lz9pbnNlY3VyZT0xJnNuaT1iYWlkdS5jb20jJUYwJTlGJTg3JUIyJUYwJTlGJTg3JUI0JUU2JUJFJUIzJUU5JTk3JUE4JUVGJUJEJTlDMDElRUYlQkQlOUNBV1MKYW55dGxzOi8vMmY0YzNmYzUtOGZhMi00NTc2LWE1ODMtOGY5OGE2MDI2ODg3QGpwYXdzLmNjd2luay5waG90b3M6NjAwMDYvP2luc2VjdXJlPTEmc25pPWJhaWR1LmNvbSMlRjAlOUYlODclQjIlRjAlOUYlODclQjQlRTYlQkUlQjMlRTklOTclQTglRUYlQkQlOUMwMiVFRiVCRCU5Q0FXUwp0dWljOi8vMmY0YzNmYzUtOGZhMi00NTc2LWE1ODMtOGY5OGE2MDI2ODg3OjJmNGMzZmM1LThmYTItNDU3Ni1hNTgzLThmOThhNjAyNjg4N0BqcGF3cy5jY3dpbmsucGhvdG9zOjU4Lz9jb25nZXN0aW9uX2NvbnRyb2w9YmJyJnVkcF9yZWxheV9tb2RlPW5hdGl2ZSZzbmk9bW9hay5jY3dpbmsuY2MmYWxwbj1oMyZhbGxvd19pbnNlY3VyZT0xIyVGMCU5RiU4NyVCMiVGMCU5RiU4NyVCNCVFNiVCRSVCMyVFOSU5NyVBOCVFRiVCRCU5QzAzJUVGJUJEJTlDQVdTCnR1aWM6Ly8yZjRjM2ZjNS04ZmEyLTQ1NzYtYTU4My04Zjk4YTYwMjY4ODc6MmY0YzNmYzUtOGZhMi00NTc2LWE1ODMtOGY5OGE2MDI2ODg3QGhrYXdzLmNjd2luay5waG90b3M6NTgvP2Nvbmdlc3Rpb25fY29udHJvbD1iYnImdWRwX3JlbGF5X21vZGU9cXVpYyZzbmk9bW9hay5jY3dpbmsuY2MmYWxwbj1oMyZhbGxvd19pbnNlY3VyZT0xIyVGMCU5RiU4NyVCMiVGMCU5RiU4NyVCNCVFNiVCRSVCMyVFOSU5NyVBOCVFRiVCRCU5QzA0JUVGJUJEJTlDQVdTCmh5MjovLzJmNGMzZmM1LThmYTItNDU3Ni1hNTgzLThmOThhNjAyNjg4N0B0dy5jY3dpbmsuY2M6MzAxMDIvP2luc2VjdXJlPTEmc25pPXR3LmNjd2luay5jYyZvYmZzPXNhbGFtYW5kZXImb2Jmcy1wYXNzd29yZD0xUFJkdjg1OElKMzdnMklwIyVGMCU5RiU4NyVCOSVGMCU5RiU4NyVCQyVFNSU4RiVCMCVFNiVCOSVCRSVFRiVCRCU5QzAxJUVGJUJEJTlDSGlOZXQKYW55dGxzOi8vMmY0YzNmYzUtOGZhMi00NTc2LWE1ODMtOGY5OGE2MDI2ODg3QHR3LmNjd2luay5jYzo2NTQ5Lz9pbnNlY3VyZT0xJnNuaT1iYWlkdS5jb20jJUYwJTlGJTg3JUI5JUYwJTlGJTg3JUJDJUU1JThGJUIwJUU2JUI5JUJFJUVGJUJEJTlDMDIlRUYlQkQlOUNIaU5ldAphbnl0bHM6Ly8yZjRjM2ZjNS04ZmEyLTQ1NzYtYTU4My04Zjk4YTYwMjY4ODdAaGthd3MuY2N3aW5rLnBob3Rvczo2MDAwMi8/aW5zZWN1cmU9MSZzbmk9YmFpZHUuY29tIyVGMCU5RiU4NyVCOSVGMCU5RiU4NyVCQyVFNSU4RiVCMCVFNiVCOSVCRSVFRiVCRCU5QzAzJUVGJUJEJTlDJUU1JUFFJUI2JUU1JUFFJUJECmFueXRsczovLzJmNGMzZmM1LThmYTItNDU3Ni1hNTgzLThmOThhNjAyNjg4N0BqcGF3cy5jY3dpbmsucGhvdG9zOjYwMDAyLz9pbnNlY3VyZT0xJnNuaT1iYWlkdS5jb20jJUYwJTlGJTg3JUI5JUYwJTlGJTg3JUJDJUU1JThGJUIwJUU2JUI5JUJFJUVGJUJEJTlDMDQlRUYlQkQlOUMlRTUlQUUlQjYlRTUlQUUlQkQKdmxlc3M6Ly8yZjRjM2ZjNS04ZmEyLTQ1NzYtYTU4My04Zjk4YTYwMjY4ODdAY2YwMi41NjQ4OTUueHl6OjIwOTYvP3R5cGU9d3MmZW5jcnlwdGlvbj1ub25lJmZsb3c9Jmhvc3Q9dHcwMS41NjQ4OTUueHl6JnBhdGg9JTJGYXNkYXNkJnNlY3VyaXR5PXRscyZzbmk9dHcwMS41NjQ4OTUueHl6JmFsbG93SW5zZWN1cmU9MSZmcD1maXJlZm94JnBhY2tldEVuY29kaW5nPXh1ZHAjJUYwJTlGJTg3JUI5JUYwJTlGJTg3JUJDJUU1JThGJUIwJUU2JUI5JUJFJUVGJUJEJTlDMDYlRUYlQkQlOUNCR1AKYW55dGxzOi8vMmY0YzNmYzUtOGZhMi00NTc2LWE1ODMtOGY5OGE2MDI2ODg3QGpwYXdzLmNjd2luay5waG90b3M6NjAwMDQvP2luc2VjdXJlPTEmc25pPWJhaWR1LmNvbSMlRjAlOUYlODclQUYlRjAlOUYlODclQjUlRTYlOTclQTUlRTYlOUMlQUMlRUYlQkQlOUMwMiVFRiVCRCU5Q0FXUwp0dWljOi8vMmY0YzNmYzUtOGZhMi00NTc2LWE1ODMtOGY5OGE2MDI2ODg3OjJmNGMzZmM1LThmYTItNDU3Ni1hNTgzLThmOThhNjAyNjg4N0Boa2F3cy5jY3dpbmsucGhvdG9zOjY1MzMvP2Nvbmdlc3Rpb25fY29udHJvbD1iYnImdWRwX3JlbGF5X21vZGU9bmF0aXZlJnNuaT1qcGRpZ2l0YWwuY2N3aW5rLmNjJmFscG49aDMmYWxsb3dfaW5zZWN1cmU9MSMlRjAlOUYlODclQUYlRjAlOUYlODclQjUlRTYlOTclQTUlRTYlOUMlQUMlRUYlQkQlOUMwMyVFRiVCRCU5Q0FXUwp0dWljOi8vMmY0YzNmYzUtOGZhMi00NTc2LWE1ODMtOGY5OGE2MDI2ODg3OjJmNGMzZmM1LThmYTItNDU3Ni1hNTgzLThmOThhNjAyNjg4N0BqcGF3cy5jY3dpbmsucGhvdG9zOjY1MzMvP2Nvbmdlc3Rpb25fY29udHJvbD1iYnImdWRwX3JlbGF5X21vZGU9bmF0aXZlJnNuaT1qcGRpZ2l0YWwuY2N3aW5rLmNjJmFscG49aDMmYWxsb3dfaW5zZWN1cmU9MSMlRjAlOUYlODclQUYlRjAlOUYlODclQjUlRTYlOTclQTUlRTYlOUMlQUMlRUYlQkQlOUMwNCVFRiVCRCU5Q0FXUwphbnl0bHM6Ly8yZjRjM2ZjNS04ZmEyLTQ1NzYtYTU4My04Zjk4YTYwMjY4ODdANDUuMTkyLjI0Mi4xMjk6NTYzMTAvP2luc2VjdXJlPTEmc25pPWJhaWR1LmNvbSMlRjAlOUYlODclQUYlRjAlOUYlODclQjUlRTYlOTclQTUlRTYlOUMlQUMlRUYlQkQlOUMwNSVFRiVCRCU5Q1NvZnRCYW5rCmFueXRsczovLzJmNGMzZmM1LThmYTItNDU3Ni1hNTgzLThmOThhNjAyNjg4N0A0NS4xOTIuMjQyLjEyOTo1NjMwOS8/aW5zZWN1cmU9MSZzbmk9YmFpZHUuY29tIyVGMCU5RiU4NyVBRiVGMCU5RiU4NyVCNSVFNiU5NyVBNSVFNiU5QyVBQyVFRiVCRCU5QzA2JUVGJUJEJTlDU29mdEJhbmsKdmxlc3M6Ly8yZjRjM2ZjNS04ZmEyLTQ1NzYtYTU4My04Zjk4YTYwMjY4ODdAY2YwMi41NjQ4OTUueHl6OjIwOTYvP3R5cGU9d3MmZW5jcnlwdGlvbj1ub25lJmZsb3c9Jmhvc3Q9anAwMS41NjQ4OTUueHl6JnBhdGg9JTJGYXNkYXNkJnNlY3VyaXR5PXRscyZzbmk9anAwMS41NjQ4OTUueHl6JmFsbG93SW5zZWN1cmU9MSZmcD1maXJlZm94JnBhY2tldEVuY29kaW5nPXh1ZHAjJUYwJTlGJTg3JUFGJUYwJTlGJTg3JUI1JUU2JTk3JUE1JUU2JTlDJUFDJUVGJUJEJTlDMDglRUYlQkQlOUNCR1AKYW55dGxzOi8vMmY0YzNmYzUtOGZhMi00NTc2LWE1ODMtOGY5OGE2MDI2ODg3QGhrYXdzLmNjd2luay5waG90b3M6NjAwMDMvP2luc2VjdXJlPTEmc25pPWJhaWR1LmNvbSMlRjAlOUYlODclQjglRjAlOUYlODclQUMlRTYlOTYlQjAlRTUlOEElQTAlRTUlOUQlQTElRUYlQkQlOUMwMSVFRiVCRCU5Q0FXUwphbnl0bHM6Ly8yZjRjM2ZjNS04ZmEyLTQ1NzYtYTU4My04Zjk4YTYwMjY4ODdAanBhd3MuY2N3aW5rLnBob3Rvczo2MDAwMy8/aW5zZWN1cmU9MSZzbmk9YmFpZHUuY29tIyVGMCU5RiU4NyVCOCVGMCU5RiU4NyVBQyVFNiU5NiVCMCVFNSU4QSVBMCVFNSU5RCVBMSVFRiVCRCU5QzAyJUVGJUJEJTlDQVdTCnR1aWM6Ly8yZjRjM2ZjNS04ZmEyLTQ1NzYtYTU4My04Zjk4YTYwMjY4ODc6MmY0YzNmYzUtOGZhMi00NTc2LWE1ODMtOGY5OGE2MDI2ODg3QGpwYXdzLmNjd2luay5waG90b3M6NTIzNDgvP2Nvbmdlc3Rpb25fY29udHJvbD1iYnImdWRwX3JlbGF5X21vZGU9bmF0aXZlJnNuaT1zZ2RpZ2l0YWwuY2N3aW5rLmNjJmFscG49aDMmYWxsb3dfaW5zZWN1cmU9MSMlRjAlOUYlODclQjglRjAlOUYlODclQUMlRTYlOTYlQjAlRTUlOEElQTAlRTUlOUQlQTElRUYlQkQlOUMwMyVFRiVCRCU5Q0FXUwp0dWljOi8vMmY0YzNmYzUtOGZhMi00NTc2LWE1ODMtOGY5OGE2MDI2ODg3OjJmNGMzZmM1LThmYTItNDU3Ni1hNTgzLThmOThhNjAyNjg4N0Boa2F3cy5jY3dpbmsucGhvdG9zOjUyMzQ4Lz9jb25nZXN0aW9uX2NvbnRyb2w9YmJyJnVkcF9yZWxheV9tb2RlPW5hdGl2ZSZzbmk9c2dkaWdpdGFsLmNjd2luay5jYyZhbHBuPWgzJmFsbG93X2luc2VjdXJlPTEjJUYwJTlGJTg3JUI4JUYwJTlGJTg3JUFDJUU2JTk2JUIwJUU1JThBJUEwJUU1JTlEJUExJUVGJUJEJTlDMDQlRUYlQkQlOUNBV1MKdmxlc3M6Ly8yZjRjM2ZjNS04ZmEyLTQ1NzYtYTU4My04Zjk4YTYwMjY4ODdAY2YwMS41NjQ4OTUueHl6OjIwNTMvP3R5cGU9d3MmZW5jcnlwdGlvbj1ub25lJmZsb3c9Jmhvc3Q9c2cwMS41NjQ4OTUueHl6JnBhdGg9JTJGYXNkYXNkJnNlY3VyaXR5PXRscyZzbmk9c2cwMS41NjQ4OTUueHl6JmFsbG93SW5zZWN1cmU9MSZmcD1maXJlZm94JnBhY2tldEVuY29kaW5nPXh1ZHAjJUYwJTlGJTg3JUI4JUYwJTlGJTg3JUFDJUU2JTk2JUIwJUU1JThBJUEwJUU1JTlEJUExJUVGJUJEJTlDMDclRUYlQkQlOUNCR1AKdmxlc3M6Ly8yZjRjM2ZjNS04ZmEyLTQ1NzYtYTU4My04Zjk4YTYwMjY4ODdAY2YwMi41NjQ4OTUueHl6OjIwOTYvP3R5cGU9d3MmZW5jcnlwdGlvbj1ub25lJmZsb3c9Jmhvc3Q9c2cwMS41NjQ4OTUueHl6JnBhdGg9JTJGYXNkYXNkJnNlY3VyaXR5PXRscyZzbmk9c2cwMS41NjQ4OTUueHl6JmFsbG93SW5zZWN1cmU9MSZmcD1maXJlZm94JnBhY2tldEVuY29kaW5nPXh1ZHAjJUYwJTlGJTg3JUI4JUYwJTlGJTg3JUFDJUU2JTk2JUIwJUU1JThBJUEwJUU1JTlEJUExJUVGJUJEJTlDMDglRUYlQkQlOUNCR1AKYW55dGxzOi8vMmY0YzNmYzUtOGZhMi00NTc2LWE1ODMtOGY5OGE2MDI2ODg3QDQzLjE2Mi4xMDguMTcyOjYwMDAyLz9pbnNlY3VyZT0xJnNuaT1iYWlkdS5jb20jJUYwJTlGJTg3JUJBJUYwJTlGJTg3JUI4JUU3JUJFJThFJUU1JTlCJUJEJUVGJUJEJTlDMDElRUYlQkQlOUNUZW5jZW50JTIwQ2xvdWQKYW55dGxzOi8vMmY0YzNmYzUtOGZhMi00NTc2LWE1ODMtOGY5OGE2MDI2ODg3QDQzLjE2Mi4xMDguMTcyOjYwMDAxLz9pbnNlY3VyZT0xJnNuaT1iYWlkdS5jb20jJUYwJTlGJTg3JUJBJUYwJTlGJTg3JUI4JUU3JUJFJThFJUU1JTlCJUJEJUVGJUJEJTlDMDIlRUYlQkQlOUNUZW5jZW50JTIwQ2xvdWQKYW55dGxzOi8vMmY0YzNmYzUtOGZhMi00NTc2LWE1ODMtOGY5OGE2MDI2ODg3QDE0NC4yNC43LjEzOTozMDAwMi8/aW5zZWN1cmU9MSZzbmk9YmFpZHUuY29tIyVGMCU5RiU4NyVCQSVGMCU5RiU4NyVCOCVFNyVCRSU4RSVFNSU5QiVCRCVFRiVCRCU5QzAzJUVGJUJEJTlDT0NJCmFueXRsczovLzJmNGMzZmM1LThmYTItNDU3Ni1hNTgzLThmOThhNjAyNjg4N0Boa2F3cy5jY3dpbmsucGhvdG9zOjMwMDAyLz9pbnNlY3VyZT0xJnNuaT1iYWlkdS5jb20jJUYwJTlGJTg3JUJBJUYwJTlGJTg3JUI4JUU3JUJFJThFJUU1JTlCJUJEJUVGJUJEJTlDMDQlRUYlQkQlOUNBV1MKYW55dGxzOi8vMmY0YzNmYzUtOGZhMi00NTc2LWE1ODMtOGY5OGE2MDI2ODg3QGpwYXdzLmNjd2luay5waG90b3M6MzAwMDIvP2luc2VjdXJlPTEmc25pPWJhaWR1LmNvbSMlRjAlOUYlODclQkElRjAlOUYlODclQjglRTclQkUlOEUlRTUlOUIlQkQlRUYlQkQlOUMwNSVFRiVCRCU5Q0FXUwphbnl0bHM6Ly8yZjRjM2ZjNS04ZmEyLTQ1NzYtYTU4My04Zjk4YTYwMjY4ODdAMTUyLjUzLjEzMy4yNTI6MzAwMDIvP2luc2VjdXJlPTEmc25pPWJhaWR1LmNvbSMlRjAlOUYlODclQTklRjAlOUYlODclQUElRTUlQkUlQjclRTUlOUIlQkQlRUYlQkQlOUMwMSVFRiVCRCU5Q05UCmFueXRsczovLzJmNGMzZmM1LThmYTItNDU3Ni1hNTgzLThmOThhNjAyNjg4N0Boa2F3cy5jY3dpbmsucGhvdG9zOjMwMDA2Lz9pbnNlY3VyZT0xJnNuaT1iYWlkdS5jb20jJUYwJTlGJTg3JUE5JUYwJTlGJTg3JUFBJUU1JUJFJUI3JUU1JTlCJUJEJUVGJUJEJTlDMDIlRUYlQkQlOUNBV1MKYW55dGxzOi8vMmY0YzNmYzUtOGZhMi00NTc2LWE1ODMtOGY5OGE2MDI2ODg3QGpwYXdzLmNjd2luay5waG90b3M6MzAwMDYvP2luc2VjdXJlPTEmc25pPWJhaWR1LmNvbSMlRjAlOUYlODclQTklRjAlOUYlODclQUElRTUlQkUlQjclRTUlOUIlQkQlRUYlQkQlOUMwMyVFRiVCRCU5Q0FXUwp0dWljOi8vMmY0YzNmYzUtOGZhMi00NTc2LWE1ODMtOGY5OGE2MDI2ODg3OjJmNGMzZmM1LThmYTItNDU3Ni1hNTgzLThmOThhNjAyNjg4N0BqcGF3cy5jY3dpbmsucGhvdG9zOjU2Lz9jb25nZXN0aW9uX2NvbnRyb2w9YmJyJnVkcF9yZWxheV9tb2RlPW5hdGl2ZSZzbmk9ZGUuY2N3aW5rLmNjJmFscG49aDMmYWxsb3dfaW5zZWN1cmU9MSMlRjAlOUYlODclQTklRjAlOUYlODclQUElRTUlQkUlQjclRTUlOUIlQkQlRUYlQkQlOUMwNCVFRiVCRCU5Q0FXUwp0dWljOi8vMmY0YzNmYzUtOGZhMi00NTc2LWE1ODMtOGY5OGE2MDI2ODg3OjJmNGMzZmM1LThmYTItNDU3Ni1hNTgzLThmOThhNjAyNjg4N0Boa2F3cy5jY3dpbmsucGhvdG9zOjU2Lz9jb25nZXN0aW9uX2NvbnRyb2w9YmJyJnVkcF9yZWxheV9tb2RlPW5hdGl2ZSZzbmk9ZGUuY2N3aW5rLmNjJmFscG49aDMmYWxsb3dfaW5zZWN1cmU9MSMlRjAlOUYlODclQTklRjAlOUYlODclQUElRTUlQkUlQjclRTUlOUIlQkQlRUYlQkQlOUMwNSVFRiVCRCU5Q0FXUwp2bGVzczovLzJmNGMzZmM1LThmYTItNDU3Ni1hNTgzLThmOThhNjAyNjg4N0BjZjAxLjU2NDg5NS54eXo6MjA1My8/dHlwZT13cyZlbmNyeXB0aW9uPW5vbmUmZmxvdz0maG9zdD1kZTAxLjU2NDg5NS54eXomcGF0aD0lMkZhc2Rhc2Qmc2VjdXJpdHk9dGxzJnNuaT1kZTAxLjU2NDg5NS54eXomYWxsb3dJbnNlY3VyZT0xJmZwPWZpcmVmb3gmcGFja2V0RW5jb2Rpbmc9eHVkcCMlRjAlOUYlODclQTklRjAlOUYlODclQUElRTUlQkUlQjclRTUlOUIlQkQlRUYlQkQlOUMwNiVFRiVCRCU5Q0JHUAp2bGVzczovLzJmNGMzZmM1LThmYTItNDU3Ni1hNTgzLThmOThhNjAyNjg4N0BjZjAyLjU2NDg5NS54eXo6MjA5Ni8/dHlwZT13cyZlbmNyeXB0aW9uPW5vbmUmZmxvdz0maG9zdD1kZTAxLjU2NDg5NS54eXomcGF0aD0lMkZhc2Rhc2Qmc2VjdXJpdHk9dGxzJnNuaT1kZTAxLjU2NDg5NS54eXomYWxsb3dJbnNlY3VyZT0xJmZwPWZpcmVmb3gmcGFja2V0RW5jb2Rpbmc9eHVkcCMlRjAlOUYlODclQTklRjAlOUYlODclQUElRTUlQkUlQjclRTUlOUIlQkQlRUYlQkQlOUMwNyVFRiVCRCU5Q0JHUAphbnl0bHM6Ly8yZjRjM2ZjNS04ZmEyLTQ1NzYtYTU4My04Zjk4YTYwMjY4ODdAMTMyLjE0NS42OS4xODI6MzAwMDIvP2luc2VjdXJlPTEmc25pPWJhaWR1LmNvbSMlRjAlOUYlODclQUMlRjAlOUYlODclQTclRTglOEIlQjElRTUlOUIlQkQlRUYlQkQlOUMwMSVFRiVCRCU5Q09DSQphbnl0bHM6Ly8yZjRjM2ZjNS04ZmEyLTQ1NzYtYTU4My04Zjk4YTYwMjY4ODdAaGthd3MuY2N3aW5rLnBob3RvczozMDAwNy8/aW5zZWN1cmU9MSZzbmk9YmFpZHUuY29tIyVGMCU5RiU4NyVBQyVGMCU5RiU4NyVBNyVFOCU4QiVCMSVFNSU5QiVCRCVFRiVCRCU5QzAyJUVGJUJEJTlDQVdTCmFueXRsczovLzJmNGMzZmM1LThmYTItNDU3Ni1hNTgzLThmOThhNjAyNjg4N0BqcGF3cy5jY3dpbmsucGhvdG9zOjMwMDA3Lz9pbnNlY3VyZT0xJnNuaT1iYWlkdS5jb20jJUYwJTlGJTg3JUFDJUYwJTlGJTg3JUE3JUU4JThCJUIxJUU1JTlCJUJEJUVGJUJEJTlDMDMlRUYlQkQlOUNBV1MKdmxlc3M6Ly8yYTVlYTMyYS0yYmQ4LTQ4ZmMtOGU1OS1iZTBiZmI0YTI3MTdAanAxLjg5MjYyMi54eXo6MjY3MDMvP3R5cGU9dGNwJmVuY3J5cHRpb249bm9uZSZmbG93PXh0bHMtcnByeC12aXNpb24mc25pPXd3dy5taWNyb3NvZnQuY29tJmZwPWNocm9tZSZzZWN1cml0eT1yZWFsaXR5JnBiaz1pM3FzRGZjX2VwLV9HR1NiMVM0QkdPMHFWTG0zcTB4ek9yTXoycjZtcjBnJnNpZD0mcGFja2V0RW5jb2Rpbmc9eHVkcCMlRjAlOUYlODclQUYlRjAlOUYlODclQjUlRTYlOTclQTUlRTYlOUMlQUMlMjAxCnZsZXNzOi8vMmE1ZWEzMmEtMmJkOC00OGZjLThlNTktYmUwYmZiNGEyNzE3QGpwMi44OTI2MjIueHl6OjI2NzA0Lz90eXBlPXRjcCZlbmNyeXB0aW9uPW5vbmUmZmxvdz14dGxzLXJwcngtdmlzaW9uJnNuaT13d3cubWljcm9zb2Z0LmNvbSZmcD1pb3Mmc2VjdXJpdHk9cmVhbGl0eSZwYms9c0hIb0tuZTY3VGI0anZPQm5xa0NTMGlQSnJva3E1V0I1Y0F0TGZQajl6YyZzaWQ9JnBhY2tldEVuY29kaW5nPXh1ZHAjJUYwJTlGJTg3JUFGJUYwJTlGJTg3JUI1JUU2JTk3JUE1JUU2JTlDJUFDJTIwMgpoeTI6Ly8yYTVlYTMyYS0yYmQ4LTQ4ZmMtOGU1OS1iZTBiZmI0YTI3MTdAanA0Ljg5MjYyMi54eXo6MjY3MDIvP3NuaT1qcDQuODkyNjIyLnh5eiMlRjAlOUYlODclQUYlRjAlOUYlODclQjUlRTYlOTclQTUlRTYlOUMlQUMlMjA0CnZsZXNzOi8vMmE1ZWEzMmEtMmJkOC00OGZjLThlNTktYmUwYmZiNGEyNzE3QGpwNS44OTI2MjIueHl6OjgwODAvP3R5cGU9dGNwJmVuY3J5cHRpb249bm9uZSZmbG93PXh0bHMtcnByeC12aXNpb24mc25pPXd3dy5taWNyb3NvZnQuY29tJmZwPWVkZ2Umc2VjdXJpdHk9cmVhbGl0eSZwYms9U3pUdmpCclpENENRSjFFbXVoY21oQno0blZhc0RJXzlqQVdMcDU1MXJ6byZzaWQ9JnBhY2tldEVuY29kaW5nPXh1ZHAjJUYwJTlGJTg3JUFGJUYwJTlGJTg3JUI1JUU2JTk3JUE1JUU2JTlDJUFDJTIwNQp2bGVzczovLzJhNWVhMzJhLTJiZDgtNDhmYy04ZTU5LWJlMGJmYjRhMjcxN0BqcDYuODkyNjIyLnh5ejoyNjcwMS8/dHlwZT10Y3AmZW5jcnlwdGlvbj1ub25lJmZsb3c9eHRscy1ycHJ4LXZpc2lvbiZzbmk9d3d3Lm1pY3Jvc29mdC5jb20mZnA9Y2hyb21lJnNlY3VyaXR5PXJlYWxpdHkmcGJrPXlVbGhrSjFpTmc1RXdLRWhFX3BEWWhGVGR3Zk8yWGNsNWZRWW45cHlBRGsmc2lkPSZwYWNrZXRFbmNvZGluZz14dWRwIyVGMCU5RiU4NyVBRiVGMCU5RiU4NyVCNSVFNiU5NyVBNSVFNiU5QyVBQyUyMDYKaHkyOi8vMmE1ZWEzMmEtMmJkOC00OGZjLThlNTktYmUwYmZiNGEyNzE3QHVzMS44OTI2MjIueHl6OjI2NzAyLz9zbmk9dXMxLjg5MjYyMi54eXojJUYwJTlGJTg3JUJBJUYwJTlGJTg3JUI4JUU3JUJFJThFJUU1JTlCJUJEJTIwMQp2bGVzczovLzJhNWVhMzJhLTJiZDgtNDhmYy04ZTU5LWJlMGJmYjRhMjcxN0B1czIuODkyNjIyLnh5ejo4MDgwLz90eXBlPXRjcCZlbmNyeXB0aW9uPW5vbmUmZmxvdz14dGxzLXJwcngtdmlzaW9uJnNuaT13d3cubWljcm9zb2Z0LmNvbSZmcD1jaHJvbWUmc2VjdXJpdHk9cmVhbGl0eSZwYms9VThxTWhNb3BvRFA5cWh4Y2JLdU9iQUdRckNBQl9PMGJFVmlERHg5TTQyRSZzaWQ9JnBhY2tldEVuY29kaW5nPXh1ZHAjJUYwJTlGJTg3JUJBJUYwJTlGJTg3JUI4JUU3JUJFJThFJUU1JTlCJUJEJTIwMgp2bGVzczovLzJhNWVhMzJhLTJiZDgtNDhmYy04ZTU5LWJlMGJmYjRhMjcxN0B1czMuODkyNjIyLnh5ejoyNjcwMS8/dHlwZT10Y3AmZW5jcnlwdGlvbj1ub25lJmZsb3c9eHRscy1ycHJ4LXZpc2lvbiZzbmk9d3d3Lm1pY3Jvc29mdC5jb20mZnA9c2FmYXJpJnNlY3VyaXR5PXJlYWxpdHkmcGJrPVFjeDZRcllNb3plQk9yZHpnOEktQmZ4WHhnUFBfQ2JQWmdWQ3pLNXZDSDQmc2lkPSZwYWNrZXRFbmNvZGluZz14dWRwIyVGMCU5RiU4NyVCQSVGMCU5RiU4NyVCOCVFNyVCRSU4RSVFNSU5QiVCRCUyMDMKdmxlc3M6Ly8yYTVlYTMyYS0yYmQ4LTQ4ZmMtOGU1OS1iZTBiZmI0YTI3MTdAdXM0Ljg5MjYyMi54eXo6MjY3MDMvP3R5cGU9dGNwJmVuY3J5cHRpb249bm9uZSZmbG93PXh0bHMtcnByeC12aXNpb24mc25pPXd3dy5taWNyb3NvZnQuY29tJmZwPWlvcyZzZWN1cml0eT1yZWFsaXR5JnBiaz04akl0LXM2YkNQUjJBMHl4RGtvcndLYU0zZjREQzZVdWdvRnRBbnN4YXpNJnNpZD0mcGFja2V0RW5jb2Rpbmc9eHVkcCMlRjAlOUYlODclQkElRjAlOUYlODclQjglRTclQkUlOEUlRTUlOUIlQkQlMjA0CnZsZXNzOi8vMmE1ZWEzMmEtMmJkOC00OGZjLThlNTktYmUwYmZiNGEyNzE3QHVzNS44OTI2MjIueHl6OjI2NzA0Lz90eXBlPXRjcCZlbmNyeXB0aW9uPW5vbmUmZmxvdz14dGxzLXJwcngtdmlzaW9uJnNuaT13d3cubWljcm9zb2Z0LmNvbSZmcD1xcSZzZWN1cml0eT1yZWFsaXR5JnBiaz1YLTdwbVktQkd2V2I3ZnItQVNrTkF3c2U0N19JLWhEZTJGV3diMlp4S2hFJnNpZD0mcGFja2V0RW5jb2Rpbmc9eHVkcCMlRjAlOUYlODclQkElRjAlOUYlODclQjglRTclQkUlOEUlRTUlOUIlQkQlMjA1CnZsZXNzOi8vMmE1ZWEzMmEtMmJkOC00OGZjLThlNTktYmUwYmZiNGEyNzE3QHVzNi44OTI2MjIueHl6OjI2NzA1Lz90eXBlPXRjcCZlbmNyeXB0aW9uPW5vbmUmZmxvdz14dGxzLXJwcngtdmlzaW9uJnNuaT13d3cubWljcm9zb2Z0LmNvbSZmcD1lZGdlJnNlY3VyaXR5PXJlYWxpdHkmcGJrPUwxWkY0eUxhRzd4M1ozRjItVnpmbktWQkxXMDk4YjVkbDhxTXo3S2JtMWsmc2lkPSZwYWNrZXRFbmNvZGluZz14dWRwIyVGMCU5RiU4NyVCQSVGMCU5RiU4NyVCOCVFNyVCRSU4RSVFNSU5QiVCRCUyMDY=
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: Rule
+log-level: info
+external-controller: 127.0.0.1:9090
+proxies:
+  - {name: "使用前\n请点击右上角更新当前组订阅", server: ccoo1.whtjdasha.com, port: 55160, type: ss, cipher: chacha20-ietf-poly1305, password: ea433063-2ce4-4dc4-b7b7-86ad4b988ba0}
+  - {name: 香港｜01｜HKT, server: hkt.ccwink.cc, port: 56309, type: hysteria2, ports: 56309, password: 2f4c3fc5-8fa2-4576-a583-8f98a6026887, sni: hkt.ccwink.cc, skip-cert-verify: true}
+  - {name: 香港｜02｜HKT, server: hkt.ccwink.cc, port: 6549, type: anytls, password: 2f4c3fc5-8fa2-4576-a583-8f98a6026887, skip-cert-verify: true}
+  - {name: 香港｜03｜家宽, server: hkaws.ccwink.photos, port: 60005, type: anytls, password: 2f4c3fc5-8fa2-4576-a583-8f98a6026887, skip-cert-verify: true}
+  - {name: 香港｜04｜家宽, server: jpaws.ccwink.photos, port: 60005, type: anytls, password: 2f4c3fc5-8fa2-4576-a583-8f98a6026887, skip-cert-verify: true}
+  - {name: 香港｜05｜AWS, server: hkaws.ccwink.photos, port: 60001, type: anytls, password: 2f4c3fc5-8fa2-4576-a583-8f98a6026887, skip-cert-verify: true}
+  - {name: 香港｜06｜AWS, server: hkaws.ccwink.photos, port: 60001, type: anytls, password: 2f4c3fc5-8fa2-4576-a583-8f98a6026887, skip-cert-verify: true}
+  - {name: 香港｜07｜AWS, server: jpaws.ccwink.photos, port: 60001, type: anytls, password: 2f4c3fc5-8fa2-4576-a583-8f98a6026887, skip-cert-verify: true}
+  - {name: 香港｜08｜AWS, server: jpaws.ccwink.photos, port: 60001, type: anytls, password: 2f4c3fc5-8fa2-4576-a583-8f98a6026887, skip-cert-verify: true}
+  - {name: 香港｜09｜AWS, server: jpaws.ccwink.photos, port: 88, type: tuic, uuid: 2f4c3fc5-8fa2-4576-a583-8f98a6026887, password: 2f4c3fc5-8fa2-4576-a583-8f98a6026887, alpn: [h3], congestion-controller: bbr, sni: hkak.ccwink.cc, skip-cert-verify: true}
+  - {name: 香港｜10｜AWS, server: hkaws.ccwink.photos, port: 88, type: tuic, uuid: 2f4c3fc5-8fa2-4576-a583-8f98a6026887, password: 2f4c3fc5-8fa2-4576-a583-8f98a6026887, alpn: [h3], congestion-controller: bbr, sni: hkak.ccwink.cc, skip-cert-verify: true}
+  - {name: 澳门｜01｜AWS, server: hkaws.ccwink.photos, port: 60006, type: anytls, password: 2f4c3fc5-8fa2-4576-a583-8f98a6026887, skip-cert-verify: true}
+  - {name: 澳门｜02｜AWS, server: jpaws.ccwink.photos, port: 60006, type: anytls, password: 2f4c3fc5-8fa2-4576-a583-8f98a6026887, skip-cert-verify: true}
+  - {name: 澳门｜03｜AWS, server: jpaws.ccwink.photos, port: 58, type: tuic, uuid: 2f4c3fc5-8fa2-4576-a583-8f98a6026887, password: 2f4c3fc5-8fa2-4576-a583-8f98a6026887, alpn: [h3], congestion-controller: bbr, sni: moak.ccwink.cc, skip-cert-verify: true}
+  - {name: 澳门｜04｜AWS, server: hkaws.ccwink.photos, port: 58, type: tuic, uuid: 2f4c3fc5-8fa2-4576-a583-8f98a6026887, password: 2f4c3fc5-8fa2-4576-a583-8f98a6026887, alpn: [h3], congestion-controller: bbr, sni: moak.ccwink.cc, skip-cert-verify: true}
+  - {name: 澳门｜05｜BGP, server: cf01.564895.xyz, port: 2053, type: vless, tls: true, uuid: 2f4c3fc5-8fa2-4576-a583-8f98a6026887, servername: mo01.564895.xyz, network: ws, ws-opts: {path: /sadasd, headers: {Host: mo01.564895.xyz}}}
+  - {name: 澳门｜06｜BGP, server: cf02.564895.xyz, port: 2096, type: vless, tls: true, uuid: 2f4c3fc5-8fa2-4576-a583-8f98a6026887, servername: mo01.564895.xyz, network: ws, ws-opts: {path: /sadasd, headers: {Host: mo01.564895.xyz}}, skip-cert-verify: true}
+  - {name: 台湾｜01｜HiNet, server: tw.ccwink.cc, port: 30102, type: hysteria2, ports: 30102, password: 2f4c3fc5-8fa2-4576-a583-8f98a6026887, obfs: salamander, obfs-password: 1PRdv858IJ37g2Ip, sni: tw.ccwink.cc, skip-cert-verify: true}
+  - {name: 台湾｜02｜HiNet, server: tw.ccwink.cc, port: 6549, type: anytls, password: 2f4c3fc5-8fa2-4576-a583-8f98a6026887, skip-cert-verify: true}
+  - {name: 台湾｜03｜家宽, server: hkaws.ccwink.photos, port: 60002, type: anytls, password: 2f4c3fc5-8fa2-4576-a583-8f98a6026887, skip-cert-verify: true}
+  - {name: 台湾｜04｜家宽, server: jpaws.ccwink.photos, port: 60002, type: anytls, password: 2f4c3fc5-8fa2-4576-a583-8f98a6026887, skip-cert-verify: true}
+  - {name: 台湾｜05｜BGP, server: cf01.564895.xyz, port: 2053, type: vless, tls: true, uuid: 2f4c3fc5-8fa2-4576-a583-8f98a6026887, servername: tw01.564895.xyz, network: ws, ws-opts: {path: /asdasd, headers: {Host: tw01.564895.xyz}}, skip-cert-verify: true}
+  - {name: 台湾｜06｜BGP, server: cf02.564895.xyz, port: 2096, type: vless, tls: true, uuid: 2f4c3fc5-8fa2-4576-a583-8f98a6026887, servername: tw01.564895.xyz, network: ws, ws-opts: {path: /asdasd, headers: {Host: tw01.564895.xyz}}, skip-cert-verify: true}
+  - {name: 日本｜01｜AWS, server: hkaws.ccwink.photos, port: 60004, type: anytls, password: 2f4c3fc5-8fa2-4576-a583-8f98a6026887, skip-cert-verify: true}
+  - {name: 日本｜02｜AWS, server: jpaws.ccwink.photos, port: 60004, type: anytls, password: 2f4c3fc5-8fa2-4576-a583-8f98a6026887, skip-cert-verify: true}
+  - {name: 日本｜03｜AWS, server: hkaws.ccwink.photos, port: 6533, type: tuic, uuid: 2f4c3fc5-8fa2-4576-a583-8f98a6026887, password: 2f4c3fc5-8fa2-4576-a583-8f98a6026887, alpn: [h3], congestion-controller: bbr, sni: jpdigital.ccwink.cc, skip-cert-verify: true}
+  - {name: 日本｜04｜AWS, server: jpaws.ccwink.photos, port: 6533, type: tuic, uuid: 2f4c3fc5-8fa2-4576-a583-8f98a6026887, password: 2f4c3fc5-8fa2-4576-a583-8f98a6026887, alpn: [h3], congestion-controller: bbr, sni: jpdigital.ccwink.cc, skip-cert-verify: true}
+  - {name: 日本｜05｜SoftBank, server: 45.192.242.129, port: 56310, type: anytls, password: 2f4c3fc5-8fa2-4576-a583-8f98a6026887, skip-cert-verify: true}
+  - {name: 日本｜06｜SoftBank, server: 45.192.242.129, port: 56309, type: anytls, password: 2f4c3fc5-8fa2-4576-a583-8f98a6026887, skip-cert-verify: true}
+  - {name: 日本｜07｜BGP, server: cf01.564895.xyz, port: 2053, type: vless, tls: true, uuid: 2f4c3fc5-8fa2-4576-a583-8f98a6026887, servername: jp01.564895.xyz, network: ws, ws-opts: {path: /asdasd, headers: {Host: jp01.564895.xyz}}, skip-cert-verify: true}
+  - {name: 日本｜08｜BGP, server: cf02.564895.xyz, port: 2096, type: vless, tls: true, uuid: 2f4c3fc5-8fa2-4576-a583-8f98a6026887, servername: jp01.564895.xyz, network: ws, ws-opts: {path: /asdasd, headers: {Host: jp01.564895.xyz}}, skip-cert-verify: true}
+  - {name: 新加坡｜01｜AWS, server: hkaws.ccwink.photos, port: 60003, type: anytls, password: 2f4c3fc5-8fa2-4576-a583-8f98a6026887, skip-cert-verify: true}
+  - {name: 新加坡｜02｜AWS, server: jpaws.ccwink.photos, port: 60003, type: anytls, password: 2f4c3fc5-8fa2-4576-a583-8f98a6026887, skip-cert-verify: true}
+  - {name: 新加坡｜03｜AWS, server: jpaws.ccwink.photos, port: 52348, type: tuic, uuid: 2f4c3fc5-8fa2-4576-a583-8f98a6026887, password: 2f4c3fc5-8fa2-4576-a583-8f98a6026887, alpn: [h3], congestion-controller: bbr, sni: sgdigital.ccwink.cc, skip-cert-verify: true}
+  - {name: 新加坡｜04｜AWS, server: hkaws.ccwink.photos, port: 52348, type: tuic, uuid: 2f4c3fc5-8fa2-4576-a583-8f98a6026887, password: 2f4c3fc5-8fa2-4576-a583-8f98a6026887, alpn: [h3], congestion-controller: bbr, sni: sgdigital.ccwink.cc, skip-cert-verify: true}
+  - {name: 新加坡｜07｜BGP, server: cf01.564895.xyz, port: 2053, type: vless, tls: true, uuid: 2f4c3fc5-8fa2-4576-a583-8f98a6026887, servername: sg01.564895.xyz, network: ws, ws-opts: {path: /asdasd, headers: {Host: sg01.564895.xyz}}, skip-cert-verify: true}
+  - {name: 新加坡｜08｜BGP, server: cf02.564895.xyz, port: 2096, type: vless, tls: true, uuid: 2f4c3fc5-8fa2-4576-a583-8f98a6026887, servername: sg01.564895.xyz, network: ws, ws-opts: {path: /asdasd, headers: {Host: sg01.564895.xyz}}, skip-cert-verify: true}
+  - {name: 美国｜01｜Tencent Cloud, server: 43.162.108.172, port: 60002, type: anytls, password: 2f4c3fc5-8fa2-4576-a583-8f98a6026887, skip-cert-verify: true}
+  - {name: 美国｜02｜Tencent Cloud, server: 43.162.108.172, port: 60001, type: anytls, password: 2f4c3fc5-8fa2-4576-a583-8f98a6026887, skip-cert-verify: true}
+  - {name: 美国｜03｜OCI, server: 144.24.7.139, port: 30002, type: anytls, password: 2f4c3fc5-8fa2-4576-a583-8f98a6026887, skip-cert-verify: true}
+  - {name: 美国｜04｜AWS, server: hkaws.ccwink.photos, port: 30002, type: anytls, password: 2f4c3fc5-8fa2-4576-a583-8f98a6026887, skip-cert-verify: true}
+  - {name: 美国｜05｜AWS, server: jpaws.ccwink.photos, port: 30002, type: anytls, password: 2f4c3fc5-8fa2-4576-a583-8f98a6026887, skip-cert-verify: true}
+  - {name: 德国｜01｜NT, server: 152.53.133.252, port: 30002, type: anytls, password: 2f4c3fc5-8fa2-4576-a583-8f98a6026887, skip-cert-verify: true}
+  - {name: 德国｜02｜AWS, server: hkaws.ccwink.photos, port: 30006, type: anytls, password: 2f4c3fc5-8fa2-4576-a583-8f98a6026887, skip-cert-verify: true}
+  - {name: 德国｜03｜AWS, server: jpaws.ccwink.photos, port: 30006, type: anytls, password: 2f4c3fc5-8fa2-4576-a583-8f98a6026887, skip-cert-verify: true}
+  - {name: 德国｜04｜AWS, server: jpaws.ccwink.photos, port: 56, type: tuic, uuid: 2f4c3fc5-8fa2-4576-a583-8f98a6026887, password: 2f4c3fc5-8fa2-4576-a583-8f98a6026887, alpn: [h3], congestion-controller: bbr, sni: de.ccwink.cc, skip-cert-verify: true}
+  - {name: 德国｜05｜AWS, server: hkaws.ccwink.photos, port: 56, type: tuic, uuid: 2f4c3fc5-8fa2-4576-a583-8f98a6026887, password: 2f4c3fc5-8fa2-4576-a583-8f98a6026887, alpn: [h3], congestion-controller: bbr, sni: de.ccwink.cc, skip-cert-verify: true}
+  - {name: 德国｜06｜BGP, server: cf01.564895.xyz, port: 2053, type: vless, tls: true, uuid: 2f4c3fc5-8fa2-4576-a583-8f98a6026887, servername: de01.564895.xyz, network: ws, ws-opts: {path: /asdasd, headers: {Host: de01.564895.xyz}}, skip-cert-verify: true}
+  - {name: 德国｜07｜BGP, server: cf02.564895.xyz, port: 2096, type: vless, tls: true, uuid: 2f4c3fc5-8fa2-4576-a583-8f98a6026887, servername: de01.564895.xyz, network: ws, ws-opts: {path: /asdasd, headers: {Host: de01.564895.xyz}}, skip-cert-verify: true}
+  - {name: 英国｜01｜OCI, server: 132.145.69.182, port: 30002, type: anytls, password: 2f4c3fc5-8fa2-4576-a583-8f98a6026887, skip-cert-verify: true}
+  - {name: 英国｜02｜AWS, server: hkaws.ccwink.photos, port: 30007, type: anytls, password: 2f4c3fc5-8fa2-4576-a583-8f98a6026887, skip-cert-verify: true}
+  - {name: 英国｜03｜AWS, server: jpaws.ccwink.photos, port: 30007, type: anytls, password: 2f4c3fc5-8fa2-4576-a583-8f98a6026887, skip-cert-verify: true}
+  - {name: 香港高速01|BGP|流媒体, server: aws-link1.liangxin1.xyz, port: 35248, type: vless, tls: true, uuid: 29b2268d-0ea7-47bb-8c99-60d71f413f8c, servername: www.lamer.com.hk, host: www.lamer.com.hk, flow: xtls-rprx-vision, reality-opts: {public-key: IGsSxC0wgn7wLy0NM0QN_yOREDKT_814Y_3_rbgDoTc, short-id: c8c0f951}, client-fingerprint: random, skip-cert-verify: false}
+  - {name: 香港高速02|BGP|流媒体, server: aws-link2.liangxin1.xyz, port: 38725, type: vless, tls: true, uuid: 29b2268d-0ea7-47bb-8c99-60d71f413f8c, servername: www.lamer.com.hk, host: www.lamer.com.hk, flow: xtls-rprx-vision, reality-opts: {public-key: HvwnLBMMKsmvghGX5yVPq3J2HWxwr1GGQB2WIvbPvAY, short-id: 8f6ca378}, client-fingerprint: random, skip-cert-verify: false}
+  - {name: 新加坡高速01|BGP|流媒体, server: aws-link7.liangxin1.xyz, port: 48574, type: vless, tls: true, uuid: 29b2268d-0ea7-47bb-8c99-60d71f413f8c, servername: www.lamer.com.sg, host: www.lamer.com.sg, flow: xtls-rprx-vision, reality-opts: {public-key: lmxSayN8tUg2Dag2MPXrdqZ2SQK9K3OjlaKk8wVCRnc, short-id: f8f18902}, client-fingerprint: random, skip-cert-verify: false}
+  - {name: 新加坡高速02|BGP|流媒体, server: aws-link8.liangxin1.xyz, port: 39645, type: vless, tls: true, uuid: 29b2268d-0ea7-47bb-8c99-60d71f413f8c, servername: iosapps.itunes.apple.com, host: iosapps.itunes.apple.com, flow: xtls-rprx-vision, reality-opts: {public-key: x7VqpFP7_PrY4ebNw8hi8Ec5Tm5Upmt5JOdrN1M9VnQ, short-id: 2b3b0b93}, client-fingerprint: random, skip-cert-verify: false}
+  - {name: 新加坡高速03|BGP|流媒体, server: aws-link9.liangxin1.xyz, port: 23587, type: vless, tls: true, uuid: 29b2268d-0ea7-47bb-8c99-60d71f413f8c, servername: iosapps.itunes.apple.com, host: iosapps.itunes.apple.com, flow: xtls-rprx-vision, reality-opts: {public-key: H66PLLf6HkZwHk4oFqisfTawIvw2cxkEwk8Ue8sHZgA, short-id: 19b580ae}, client-fingerprint: random, skip-cert-verify: false}
+  - {name: 新加坡高速04|BGP|流媒体, server: cfyes.lxy1015.top, port: 443, type: vless, tls: true, uuid: 29b2268d-0ea7-47bb-8c99-60d71f413f8c, servername: lx-1sg.lxy1015.top, network: ws, ws-opts: {path: /liangxin/sg1, headers: {Host: lx-1sg.lxy1015.top}}, skip-cert-verify: false}
+  - {name: 新加坡高速05|BGP|流媒体, server: cfyes.lxy1015.top, port: 443, type: vless, tls: true, uuid: 29b2268d-0ea7-47bb-8c99-60d71f413f8c, servername: lx-1sg.lxy1015.top, network: ws, ws-opts: {path: /liangxin/sg1, headers: {Host: lx-1sg.lxy1015.top}}, skip-cert-verify: false}
+  - {name: 新加坡高速06|BGP|流媒体, server: cfyes.lxy1015.top, port: 443, type: vless, tls: true, uuid: 29b2268d-0ea7-47bb-8c99-60d71f413f8c, servername: lx-1sg.lxy1015.top, network: ws, ws-opts: {path: /liangxin/sg1, headers: {Host: lx-1sg.lxy1015.top}}, skip-cert-verify: false}
+  - {name: 日本高速03|BGP|流媒体, server: cfyes.lxy1015.top, port: 443, type: vless, tls: true, uuid: 29b2268d-0ea7-47bb-8c99-60d71f413f8c, servername: lxs1jp.lxy1015.top, network: ws, ws-opts: {path: /liangxin/jp1, headers: {Host: lxs1jp.lxy1015.top}}, skip-cert-verify: false}
+  - {name: 日本高速04|BGP|流媒体, server: cfyes.lxy1015.top, port: 443, type: vless, tls: true, uuid: 29b2268d-0ea7-47bb-8c99-60d71f413f8c, servername: lxs1jp.lxy1015.top, network: ws, ws-opts: {path: /liangxin/jp1, headers: {Host: lxs1jp.lxy1015.top}}, skip-cert-verify: false}
+  - {name: 日本高速05|BGP|流媒体, server: cfyes.lxy1015.top, port: 443, type: vless, tls: true, uuid: 29b2268d-0ea7-47bb-8c99-60d71f413f8c, servername: lxs2jp.lxy1015.top, network: ws, ws-opts: {path: /liangxin/jp1, headers: {Host: lxs2jp.lxy1015.top}}, skip-cert-verify: false}
+  - {name: 日本高速06|BGP|流媒体, server: cfyes.lxy1015.top, port: 443, type: vless, tls: true, uuid: 29b2268d-0ea7-47bb-8c99-60d71f413f8c, servername: lxs2jp.lxy1015.top, network: ws, ws-opts: {path: /liangxin/jp1, headers: {Host: lxs2jp.lxy1015.top}}, skip-cert-verify: false}
+  - {name: 美国高速01|流媒体, server: aws-link19.liangxin1.xyz, port: 443, type: vless, tls: true, uuid: 29b2268d-0ea7-47bb-8c99-60d71f413f8c, servername: download-porter.hoyoverse.com, host: download-porter.hoyoverse.com, flow: xtls-rprx-vision, reality-opts: {public-key: QE5l0RUqs4OsH3j3u_xHm06-4NlILmQivZUJqiEx11o, short-id: 6314e825}, client-fingerprint: random, skip-cert-verify: false}
+  - {name: 美国高速03|流媒体, server: cfyes.lxy1015.top, port: 443, type: vless, tls: true, uuid: 29b2268d-0ea7-47bb-8c99-60d71f413f8c, servername: lx-us1.lxy1015.top, network: ws, ws-opts: {path: /liangxin/us, headers: {Host: lx-us1.lxy1015.top}}, skip-cert-verify: false}
+  - {name: 美国高速04|流媒体, server: cfyes.lxy1015.top, port: 443, type: vless, tls: true, uuid: 29b2268d-0ea7-47bb-8c99-60d71f413f8c, servername: lx-us1.lxy1015.top, network: ws, ws-opts: {path: /liangxin/us, headers: {Host: lx-us1.lxy1015.top}}, skip-cert-verify: false}
+  - {name: 韩国高速01|BGP|流媒体, server: aws-link25.liangxin1.xyz, port: 34578, type: vless, tls: true, uuid: 29b2268d-0ea7-47bb-8c99-60d71f413f8c, servername: download-porter.hoyoverse.com, host: download-porter.hoyoverse.com, flow: xtls-rprx-vision, reality-opts: {public-key: PSn2s5TN4e7n0LkzPunu2IA1hSmOoPYFu3d_psl2Nmc, short-id: e534c8be}, client-fingerprint: random, skip-cert-verify: false}
+  - {name: 台湾高速01|BGP|流媒体, server: aws-link27.liangxin1.xyz, port: 443, type: vless, tls: true, uuid: 29b2268d-0ea7-47bb-8c99-60d71f413f8c, servername: download-porter.hoyoverse.com, host: download-porter.hoyoverse.com, flow: xtls-rprx-vision, reality-opts: {public-key: a9I2uA3NNZA6uBAe3Tui9vZ8CG5MrMaYOifWrAdc0zg, short-id: a8609be8}, client-fingerprint: random, skip-cert-verify: false}
+  - {name: 香港专线02|BGP|流媒体, server: aws-linkhy2.liangxin1.xyz, port: 60000, type: hysteria2, ports: 60000, password: 29b2268d-0ea7-47bb-8c99-60d71f413f8c, sni: iosapps.itunes.apple.com, skip-cert-verify: true}
+  - {name: 香港专线03|BGP|流媒体, server: aws-linkhy3.liangxin1.xyz, port: 60000, type: hysteria2, ports: 60000, password: 29b2268d-0ea7-47bb-8c99-60d71f413f8c, sni: iosapps.itunes.apple.com, skip-cert-verify: true}
+  - {name: 新加坡专线02|BGP|流媒体, server: aws-linkhy10.liangxin1.xyz, port: 60000, type: hysteria2, ports: 60000, password: 29b2268d-0ea7-47bb-8c99-60d71f413f8c, sni: iosapps.itunes.apple.com, skip-cert-verify: true}
+  - {name: 新加坡专线03|BGP|流媒体, server: aws-linkhy11.liangxin1.xyz, port: 60000, type: hysteria2, ports: 60000, password: 29b2268d-0ea7-47bb-8c99-60d71f413f8c, sni: iosapps.itunes.apple.com, skip-cert-verify: true}
+  - {name: 日本专线01|BGP|流媒体, server: aws-linkhy15.liangxin1.xyz, port: 60000, type: hysteria2, ports: 60000, password: 29b2268d-0ea7-47bb-8c99-60d71f413f8c, sni: bilibili-jp.biliimg.com, skip-cert-verify: true}
+  - {name: 日本专线02|BGP|流媒体, server: aws-linkhy16.liangxin1.xyz, port: 60000, type: hysteria2, ports: 60000, password: 29b2268d-0ea7-47bb-8c99-60d71f413f8c, sni: bilibili-jp2.biliimg.com, skip-cert-verify: true}
+  - {name: 韩国专线01|BGP|流媒体, server: aws-linkhy21.liangxin1.xyz, port: 60000, type: hysteria2, ports: 60000, password: 29b2268d-0ea7-47bb-8c99-60d71f413f8c, sni: bilibili-kr.biliimg.com, skip-cert-verify: true}
+  - {name: 台湾专线01|BGP|流媒体, server: aws-linkhy23.liangxin1.xyz, port: 60000, type: hysteria2, ports: 60000, password: 29b2268d-0ea7-47bb-8c99-60d71f413f8c, sni: bilibili-tw.biliimg.com, skip-cert-verify: true}
+  - {name: 美国01|流媒体, server: 203.10.97.121, port: 60000, type: hysteria2, ports: 60000, password: 29b2268d-0ea7-47bb-8c99-60d71f413f8c, sni: www.apple.com, skip-cert-verify: true}
+  - {name: 美国02|流媒体, server: aws-linkhy27.liangxin1.xyz, port: 60000, type: hysteria2, ports: 60000, password: 29b2268d-0ea7-47bb-8c99-60d71f413f8c, sni: www.apple.com, skip-cert-verify: true}
+  - {name: 电信测试线路1, server: 162.159.48.5, port: 443, type: vless, tls: true, uuid: cb3b4b9b-b545-498d-8ba7-7007c0e1b4d4, servername: 227.bxyewqrbx.top, network: ws, ws-opts: {path: /jd/xg1, headers: {Host: 227.bxyewqrbx.top}}}
+  - {name: 联通测试线路2, server: 104.26.12.210, port: 443, type: vless, tls: true, uuid: cb3b4b9b-b545-498d-8ba7-7007c0e1b4d4, servername: 227.bxyewqrbx.top, network: ws, ws-opts: {path: /jd/xg1, headers: {Host: 227.bxyewqrbx.top}}}
+  - {name: 移动测试线路3, server: 104.18.45.170, port: 443, type: vless, tls: true, uuid: cb3b4b9b-b545-498d-8ba7-7007c0e1b4d4, servername: 227.bxyewqrbx.top, network: ws, ws-opts: {path: /jd/xg1, headers: {Host: 227.bxyewqrbx.top}}}
+  - {name: 线路01, server: usa1.wanxiangjd.cc, port: 14010, type: anytls, password: cb3b4b9b-b545-498d-8ba7-7007c0e1b4d4, skip-cert-verify: true}
+  - {name: "直连美国A1[推荐]", server: usa1.wanxiangjd.cc, port: 14010, type: anytls, password: cb3b4b9b-b545-498d-8ba7-7007c0e1b4d4, skip-cert-verify: true}
+  - {name: "直连美国A2[推荐]", server: usa3.wanxiangjd.cc, port: 14010, type: anytls, password: cb3b4b9b-b545-498d-8ba7-7007c0e1b4d4, skip-cert-verify: true}
+  - {name: 【家宽】香港01, server: hk.subwx.com, port: 35000, type: hysteria2, ports: 35000, password: cb3b4b9b-b545-498d-8ba7-7007c0e1b4d4, sni: apple.com, skip-cert-verify: true}
+  - {name: 香港1, server: a1.wanxiangjd.cc, port: 10001, type: anytls, password: cb3b4b9b-b545-498d-8ba7-7007c0e1b4d4, skip-cert-verify: true}
+  - {name: 香港2, server: a1.wanxiangjd.cc, port: 10002, type: anytls, password: cb3b4b9b-b545-498d-8ba7-7007c0e1b4d4, skip-cert-verify: true}
+  - {name: 香港3, server: a1.wanxiangjd.cc, port: 10003, type: anytls, password: cb3b4b9b-b545-498d-8ba7-7007c0e1b4d4, skip-cert-verify: true}
+  - {name: 香港4, server: a1.wanxiangjd.cc, port: 10004, type: anytls, password: cb3b4b9b-b545-498d-8ba7-7007c0e1b4d4, skip-cert-verify: true}
+  - {name: 香港5, server: a1.wanxiangjd.cc, port: 10005, type: anytls, password: cb3b4b9b-b545-498d-8ba7-7007c0e1b4d4, skip-cert-verify: true}
+  - {name: 香港6, server: a1.wanxiangjd.cc, port: 10006, type: anytls, password: cb3b4b9b-b545-498d-8ba7-7007c0e1b4d4, skip-cert-verify: true}
+  - {name: 香港7, server: a1.wanxiangjd.cc, port: 10007, type: anytls, password: cb3b4b9b-b545-498d-8ba7-7007c0e1b4d4, skip-cert-verify: true}
+  - {name: 香港8, server: a1.wanxiangjd.cc, port: 10008, type: anytls, password: cb3b4b9b-b545-498d-8ba7-7007c0e1b4d4, skip-cert-verify: true}
+  - {name: 香港9, server: a1.wanxiangjd.cc, port: 10009, type: anytls, password: cb3b4b9b-b545-498d-8ba7-7007c0e1b4d4, skip-cert-verify: true}
+  - {name: 香港10, server: a1.wanxiangjd.cc, port: 10010, type: anytls, password: cb3b4b9b-b545-498d-8ba7-7007c0e1b4d4, skip-cert-verify: true}
+  - {name: 香港11, server: a1.wanxiangjd.cc, port: 10011, type: anytls, password: cb3b4b9b-b545-498d-8ba7-7007c0e1b4d4, skip-cert-verify: true}
+  - {name: 香港12, server: a1.wanxiangjd.cc, port: 10012, type: anytls, password: cb3b4b9b-b545-498d-8ba7-7007c0e1b4d4, skip-cert-verify: true}
+  - {name: 日本1, server: a1.wanxiangjd.cc, port: 11001, type: anytls, password: cb3b4b9b-b545-498d-8ba7-7007c0e1b4d4, skip-cert-verify: true}
+  - {name: 日本2, server: a1.wanxiangjd.cc, port: 11002, type: anytls, password: cb3b4b9b-b545-498d-8ba7-7007c0e1b4d4, skip-cert-verify: true}
+  - {name: 日本3, server: a1.wanxiangjd.cc, port: 11003, type: anytls, password: cb3b4b9b-b545-498d-8ba7-7007c0e1b4d4, skip-cert-verify: true}
+  - {name: 日本4, server: a1.wanxiangjd.cc, port: 11004, type: anytls, password: cb3b4b9b-b545-498d-8ba7-7007c0e1b4d4, skip-cert-verify: true}
+  - {name: 日本5, server: a1.wanxiangjd.cc, port: 11005, type: anytls, password: cb3b4b9b-b545-498d-8ba7-7007c0e1b4d4, skip-cert-verify: true}
+  - {name: 日本6, server: a1.wanxiangjd.cc, port: 11006, type: anytls, password: cb3b4b9b-b545-498d-8ba7-7007c0e1b4d4, skip-cert-verify: true}
+  - {name: 日本7, server: a1.wanxiangjd.cc, port: 11007, type: anytls, password: cb3b4b9b-b545-498d-8ba7-7007c0e1b4d4, skip-cert-verify: true}
+  - {name: 日本8, server: a1.wanxiangjd.cc, port: 11008, type: anytls, password: cb3b4b9b-b545-498d-8ba7-7007c0e1b4d4, skip-cert-verify: true}
+  - {name: 新加坡1, server: a1.wanxiangjd.cc, port: 12001, type: anytls, password: cb3b4b9b-b545-498d-8ba7-7007c0e1b4d4, skip-cert-verify: true}
+  - {name: 新加坡2, server: a1.wanxiangjd.cc, port: 12002, type: anytls, password: cb3b4b9b-b545-498d-8ba7-7007c0e1b4d4, skip-cert-verify: true}
+  - {name: 新加坡3, server: a1.wanxiangjd.cc, port: 12003, type: anytls, password: cb3b4b9b-b545-498d-8ba7-7007c0e1b4d4, skip-cert-verify: true}
+  - {name: 新加坡4, server: a1.wanxiangjd.cc, port: 12004, type: anytls, password: cb3b4b9b-b545-498d-8ba7-7007c0e1b4d4, skip-cert-verify: true}
+  - {name: 新加坡5, server: a1.wanxiangjd.cc, port: 12005, type: anytls, password: cb3b4b9b-b545-498d-8ba7-7007c0e1b4d4, skip-cert-verify: true}
+  - {name: 新加坡6, server: a1.wanxiangjd.cc, port: 12006, type: anytls, password: cb3b4b9b-b545-498d-8ba7-7007c0e1b4d4, skip-cert-verify: true}
+  - {name: 新加坡7, server: a1.wanxiangjd.cc, port: 12007, type: anytls, password: cb3b4b9b-b545-498d-8ba7-7007c0e1b4d4, skip-cert-verify: true}
+  - {name: 新加坡8, server: a1.wanxiangjd.cc, port: 12008, type: anytls, password: cb3b4b9b-b545-498d-8ba7-7007c0e1b4d4, skip-cert-verify: true}
+  - {name: 台湾1, server: a1.wanxiangjd.cc, port: 13001, type: anytls, password: cb3b4b9b-b545-498d-8ba7-7007c0e1b4d4, skip-cert-verify: true}
+  - {name: 台湾2, server: a1.wanxiangjd.cc, port: 13002, type: anytls, password: cb3b4b9b-b545-498d-8ba7-7007c0e1b4d4, skip-cert-verify: true}
+  - {name: 台湾3, server: a1.wanxiangjd.cc, port: 13003, type: anytls, password: cb3b4b9b-b545-498d-8ba7-7007c0e1b4d4, skip-cert-verify: true}
+  - {name: 台湾4, server: a1.wanxiangjd.cc, port: 13004, type: anytls, password: cb3b4b9b-b545-498d-8ba7-7007c0e1b4d4, skip-cert-verify: true}
+  - {name: 台湾5, server: a1.wanxiangjd.cc, port: 13005, type: anytls, password: cb3b4b9b-b545-498d-8ba7-7007c0e1b4d4, skip-cert-verify: true}
+  - {name: 台湾6, server: a1.wanxiangjd.cc, port: 13006, type: anytls, password: cb3b4b9b-b545-498d-8ba7-7007c0e1b4d4, skip-cert-verify: true}
+  - {name: 台湾7, server: a1.wanxiangjd.cc, port: 13007, type: anytls, password: cb3b4b9b-b545-498d-8ba7-7007c0e1b4d4, skip-cert-verify: true}
+  - {name: 台湾8, server: a1.wanxiangjd.cc, port: 13008, type: anytls, password: cb3b4b9b-b545-498d-8ba7-7007c0e1b4d4, skip-cert-verify: true}
+  - {name: 美国1-1, server: a1.wanxiangjd.cc, port: 14001, type: anytls, password: cb3b4b9b-b545-498d-8ba7-7007c0e1b4d4, skip-cert-verify: true}
+  - {name: 美国1-2, server: a1.wanxiangjd.cc, port: 14002, type: anytls, password: cb3b4b9b-b545-498d-8ba7-7007c0e1b4d4, skip-cert-verify: true}
+  - {name: 美国1-3, server: a1.wanxiangjd.cc, port: 14003, type: anytls, password: cb3b4b9b-b545-498d-8ba7-7007c0e1b4d4, skip-cert-verify: true}
+  - {name: 美国1-4, server: a1.wanxiangjd.cc, port: 14004, type: anytls, password: cb3b4b9b-b545-498d-8ba7-7007c0e1b4d4, skip-cert-verify: true}
+  - {name: 美国1-5, server: a1.wanxiangjd.cc, port: 14005, type: anytls, password: cb3b4b9b-b545-498d-8ba7-7007c0e1b4d4, skip-cert-verify: true}
+  - {name: 美国1-6, server: a1.wanxiangjd.cc, port: 14006, type: anytls, password: cb3b4b9b-b545-498d-8ba7-7007c0e1b4d4, skip-cert-verify: true}
+  - {name: 美国1-7, server: a1.wanxiangjd.cc, port: 14007, type: anytls, password: cb3b4b9b-b545-498d-8ba7-7007c0e1b4d4, skip-cert-verify: true}
+  - {name: 美国1-8, server: a1.wanxiangjd.cc, port: 14008, type: anytls, password: cb3b4b9b-b545-498d-8ba7-7007c0e1b4d4, skip-cert-verify: true}
+proxy-groups:
+  - name: 🚀 手动选择
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - "使用前\n请点击右上角更新当前组订阅"
+      - 香港｜01｜HKT
+      - 香港｜02｜HKT
+      - 香港｜03｜家宽
+      - 香港｜04｜家宽
+      - 香港｜05｜AWS
+      - 香港｜06｜AWS
+      - 香港｜07｜AWS
+      - 香港｜08｜AWS
+      - 香港｜09｜AWS
+      - 香港｜10｜AWS
+      - 澳门｜01｜AWS
+      - 澳门｜02｜AWS
+      - 澳门｜03｜AWS
+      - 澳门｜04｜AWS
+      - 澳门｜05｜BGP
+      - 澳门｜06｜BGP
+      - 台湾｜01｜HiNet
+      - 台湾｜02｜HiNet
+      - 台湾｜03｜家宽
+      - 台湾｜04｜家宽
+      - 台湾｜05｜BGP
+      - 台湾｜06｜BGP
+      - 日本｜01｜AWS
+      - 日本｜02｜AWS
+      - 日本｜03｜AWS
+      - 日本｜04｜AWS
+      - 日本｜05｜SoftBank
+      - 日本｜06｜SoftBank
+      - 日本｜07｜BGP
+      - 日本｜08｜BGP
+      - 新加坡｜01｜AWS
+      - 新加坡｜02｜AWS
+      - 新加坡｜03｜AWS
+      - 新加坡｜04｜AWS
+      - 新加坡｜07｜BGP
+      - 新加坡｜08｜BGP
+      - 美国｜01｜Tencent Cloud
+      - 美国｜02｜Tencent Cloud
+      - 美国｜03｜OCI
+      - 美国｜04｜AWS
+      - 美国｜05｜AWS
+      - 德国｜01｜NT
+      - 德国｜02｜AWS
+      - 德国｜03｜AWS
+      - 德国｜04｜AWS
+      - 德国｜05｜AWS
+      - 德国｜06｜BGP
+      - 德国｜07｜BGP
+      - 英国｜01｜OCI
+      - 英国｜02｜AWS
+      - 英国｜03｜AWS
+      - 香港高速01|BGP|流媒体
+      - 香港高速02|BGP|流媒体
+      - 新加坡高速01|BGP|流媒体
+      - 新加坡高速02|BGP|流媒体
+      - 新加坡高速03|BGP|流媒体
+      - 新加坡高速04|BGP|流媒体
+      - 新加坡高速05|BGP|流媒体
+      - 新加坡高速06|BGP|流媒体
+      - 日本高速03|BGP|流媒体
+      - 日本高速04|BGP|流媒体
+      - 日本高速05|BGP|流媒体
+      - 日本高速06|BGP|流媒体
+      - 美国高速01|流媒体
+      - 美国高速03|流媒体
+      - 美国高速04|流媒体
+      - 韩国高速01|BGP|流媒体
+      - 台湾高速01|BGP|流媒体
+      - 香港专线02|BGP|流媒体
+      - 香港专线03|BGP|流媒体
+      - 新加坡专线02|BGP|流媒体
+      - 新加坡专线03|BGP|流媒体
+      - 日本专线01|BGP|流媒体
+      - 日本专线02|BGP|流媒体
+      - 韩国专线01|BGP|流媒体
+      - 台湾专线01|BGP|流媒体
+      - 美国01|流媒体
+      - 美国02|流媒体
+      - 电信测试线路1
+      - 联通测试线路2
+      - 移动测试线路3
+      - 线路01
+      - 直连美国A1[推荐]
+      - 直连美国A2[推荐]
+      - 【家宽】香港01
+      - 香港1
+      - 香港2
+      - 香港3
+      - 香港4
+      - 香港5
+      - 香港6
+      - 香港7
+      - 香港8
+      - 香港9
+      - 香港10
+      - 香港11
+      - 香港12
+      - 日本1
+      - 日本2
+      - 日本3
+      - 日本4
+      - 日本5
+      - 日本6
+      - 日本7
+      - 日本8
+      - 新加坡1
+      - 新加坡2
+      - 新加坡3
+      - 新加坡4
+      - 新加坡5
+      - 新加坡6
+      - 新加坡7
+      - 新加坡8
+      - 台湾1
+      - 台湾2
+      - 台湾3
+      - 台湾4
+      - 台湾5
+      - 台湾6
+      - 台湾7
+      - 台湾8
+      - 美国1-1
+      - 美国1-2
+      - 美国1-3
+      - 美国1-4
+      - 美国1-5
+      - 美国1-6
+      - 美国1-7
+      - 美国1-8
+  - name: ♻️ 自动选择
+    type: url-test
+    url: https://cp.cloudflare.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies:
+      - "使用前\n请点击右上角更新当前组订阅"
+      - 香港｜01｜HKT
+      - 香港｜02｜HKT
+      - 香港｜03｜家宽
+      - 香港｜04｜家宽
+      - 香港｜05｜AWS
+      - 香港｜06｜AWS
+      - 香港｜07｜AWS
+      - 香港｜08｜AWS
+      - 香港｜09｜AWS
+      - 香港｜10｜AWS
+      - 澳门｜01｜AWS
+      - 澳门｜02｜AWS
+      - 澳门｜03｜AWS
+      - 澳门｜04｜AWS
+      - 澳门｜05｜BGP
+      - 澳门｜06｜BGP
+      - 台湾｜01｜HiNet
+      - 台湾｜02｜HiNet
+      - 台湾｜03｜家宽
+      - 台湾｜04｜家宽
+      - 台湾｜05｜BGP
+      - 台湾｜06｜BGP
+      - 日本｜01｜AWS
+      - 日本｜02｜AWS
+      - 日本｜03｜AWS
+      - 日本｜04｜AWS
+      - 日本｜05｜SoftBank
+      - 日本｜06｜SoftBank
+      - 日本｜07｜BGP
+      - 日本｜08｜BGP
+      - 新加坡｜01｜AWS
+      - 新加坡｜02｜AWS
+      - 新加坡｜03｜AWS
+      - 新加坡｜04｜AWS
+      - 新加坡｜07｜BGP
+      - 新加坡｜08｜BGP
+      - 美国｜01｜Tencent Cloud
+      - 美国｜02｜Tencent Cloud
+      - 美国｜03｜OCI
+      - 美国｜04｜AWS
+      - 美国｜05｜AWS
+      - 德国｜01｜NT
+      - 德国｜02｜AWS
+      - 德国｜03｜AWS
+      - 德国｜04｜AWS
+      - 德国｜05｜AWS
+      - 德国｜06｜BGP
+      - 德国｜07｜BGP
+      - 英国｜01｜OCI
+      - 英国｜02｜AWS
+      - 英国｜03｜AWS
+      - 香港高速01|BGP|流媒体
+      - 香港高速02|BGP|流媒体
+      - 新加坡高速01|BGP|流媒体
+      - 新加坡高速02|BGP|流媒体
+      - 新加坡高速03|BGP|流媒体
+      - 新加坡高速04|BGP|流媒体
+      - 新加坡高速05|BGP|流媒体
+      - 新加坡高速06|BGP|流媒体
+      - 日本高速03|BGP|流媒体
+      - 日本高速04|BGP|流媒体
+      - 日本高速05|BGP|流媒体
+      - 日本高速06|BGP|流媒体
+      - 美国高速01|流媒体
+      - 美国高速03|流媒体
+      - 美国高速04|流媒体
+      - 韩国高速01|BGP|流媒体
+      - 台湾高速01|BGP|流媒体
+      - 香港专线02|BGP|流媒体
+      - 香港专线03|BGP|流媒体
+      - 新加坡专线02|BGP|流媒体
+      - 新加坡专线03|BGP|流媒体
+      - 日本专线01|BGP|流媒体
+      - 日本专线02|BGP|流媒体
+      - 韩国专线01|BGP|流媒体
+      - 台湾专线01|BGP|流媒体
+      - 美国01|流媒体
+      - 美国02|流媒体
+      - 电信测试线路1
+      - 联通测试线路2
+      - 移动测试线路3
+      - 线路01
+      - 直连美国A1[推荐]
+      - 直连美国A2[推荐]
+      - 【家宽】香港01
+      - 香港1
+      - 香港2
+      - 香港3
+      - 香港4
+      - 香港5
+      - 香港6
+      - 香港7
+      - 香港8
+      - 香港9
+      - 香港10
+      - 香港11
+      - 香港12
+      - 日本1
+      - 日本2
+      - 日本3
+      - 日本4
+      - 日本5
+      - 日本6
+      - 日本7
+      - 日本8
+      - 新加坡1
+      - 新加坡2
+      - 新加坡3
+      - 新加坡4
+      - 新加坡5
+      - 新加坡6
+      - 新加坡7
+      - 新加坡8
+      - 台湾1
+      - 台湾2
+      - 台湾3
+      - 台湾4
+      - 台湾5
+      - 台湾6
+      - 台湾7
+      - 台湾8
+      - 美国1-1
+      - 美国1-2
+      - 美国1-3
+      - 美国1-4
+      - 美国1-5
+      - 美国1-6
+      - 美国1-7
+      - 美国1-8
+  - name: 🎯 全球直连
+    type: select
+    proxies:
+      - DIRECT
+rules:
+  - GEOSITE,gfw,🚀 手动选择
+  - GEOIP,telegram,🚀 手动选择,no-resolve
+  - GEOIP,facebook,🚀 手动选择,no-resolve
+  - GEOIP,twitter,🚀 手动选择,no-resolve
+  - MATCH,🎯 全球直连
